@@ -26,3 +26,5 @@ Route::group(['middleware' => 'web'], function(){
 Route::get('/autors', [App\Http\Controllers\AutorController::class, 'index'])->name('listAutor');
 
 Route::get('/autors/new', [App\Http\Controllers\AutorController::class, 'newAutor'])->name('form');
+
+Route::post('/autors/add', [App\Http\Controllers\AutorController::class, 'add'])->name('form');

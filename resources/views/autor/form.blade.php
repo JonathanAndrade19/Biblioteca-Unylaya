@@ -13,8 +13,10 @@
                                 {{ session('status') }}
                             </div>
                         @endif
+
                         <div class="container">
-                            <form>
+                            <form action="{{url('autors/add')}}" method="post">
+                                @csrf
                                 <div class="form-group">
                                     <label for="nome">Nome:</label>
                                     <input type="text" class="form-control" name="nome">
@@ -32,7 +34,7 @@
 
                                 <div class="form-group">
                                     <label for="email">Nascimento</label>
-                                    <input type="date" class="form-control" name="nascimento">
+                                    <input type="date" class="form-control" name="ano_nascimento">
                                 </div>
 
                                 <button type="submit" class="btn btn-primary">Cadastrar</button>
