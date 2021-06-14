@@ -7,4 +7,10 @@ Tecnologia usadas:
 
 ### Como inicias o Projeto
 
-e preciso que fazer um clone do projeto com o comando: git clone https://github.com/JonathanAndrade19/Biblioteca-Unylaya
+e preciso que fazer um clone do projeto com o comando: 
+```
+git clone https://github.com/JonathanAndrade19/Biblioteca-Unylaya
+```
+em seguida crie um banco de dados e rode as migrate
+
+crie um login de acesso e assim você terá acesso ao sistema.
