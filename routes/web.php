@@ -36,4 +36,14 @@ Route::post('/autors/update/{id}', [App\Http\Controllers\AutorController::class,
 Route::delete('/autors/delete/{id}', [App\Http\Controllers\AutorController::class, 'delete'])->name('form');
 
 
-//Route::get('/livros', );
+Route::get('/livros', [App\Http\Controllers\LivrosController::class, 'index'])->name('listLivros');
+
+Route::get('/livros/new', [App\Http\Controllers\LivrosController::class, 'newLivros'])->name('form');
+
+Route::post('/livros/add', [App\Http\Controllers\LivrosController::class, 'add'])->name('form');
+
+Route::get('/livros/{id}/edit', [App\Http\Controllers\LivrosController::class, 'edit'])->name('form');
+
+Route::post('/livros/update/{id}', [App\Http\Controllers\LivrosController::class, 'update'])->name('form');
+
+Route::delete('/livros/delete/{id}', [App\Http\Controllers\LivrosController::class, 'delete'])->name('form');
