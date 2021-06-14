@@ -15,7 +15,13 @@
                     @endif
 
                         <h3>{{ __('Seja Bem-Vindo a nossa Biblioteca Unyleya') }}</h3>
-                        <a href="{{url('autors')}}">Lista dos Autores</a>
+                        <div>
+                            <a href="{{url('autors')}}">Lista dos Autores</a>
+                        </div>
+                        <div>
+                            <a href="{{url('livros')}}">Lista dos Livros</a>
+                        </div>
+
                 </div>
             </div>
         </div>

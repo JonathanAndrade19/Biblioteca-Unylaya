@@ -20,11 +20,30 @@ class AutorController extends Controller
         return view('autor.form');
     }
 
-    public function add(Request $request){
+    public function add( Request $request ){
         $autor = new Autor();
         $autor = $autor->create($request->all());
         return Redirect::to('/autors');
 
+    }
+
+    public function edit( $id ){
+        $autor = Autor::findOrFail( $id );
+        return view('autor.form',['autor' => $autor]);
+    }
+
+    public function update( $id, Request $request )
+    {
+        $autor = Autor::findOrFail( $id );
+        $autor->update($request->all());
+        return Redirect::to('/autors');
+    }
+
+    public function delete( $id )
+    {
+        $autor = Autor::findOrFail( $id );
+        $autor->delete();
+        return Redirect::to('/autors');
     }
 
 }

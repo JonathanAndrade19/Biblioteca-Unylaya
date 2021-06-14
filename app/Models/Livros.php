@@ -1,0 +1,19 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class Livros extends Model
+{
+    use HasFactory;
+    protected $fillable = [
+        'autor',
+        'id_autor',
+        'genero_literario',
+        'editora',
+        'titulo',
+        'ano_lancamento'
+    ];
+}

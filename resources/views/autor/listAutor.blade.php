@@ -22,6 +22,7 @@
                                 <th scope="col">Sexo</th>
                                 <th scope="col">Ano Nascimento</th>
                                 <th scope="col">Nacionalidade</th>
+                                <th scope="col" colspan="2" style="text-align: center">Ações</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -30,8 +31,18 @@
                                     <th scope="row">{{$aut->id}}</th>
                                     <td>{{$aut->nome}}</td>
                                     <td>{{$aut->sexo}}</td>
-                                    <td>{{$aut->ano_nascimento}}</td>
+                                    <td> {{ \Carbon\Carbon::parse($aut->ano_nascimento)->format('d/m/Y')}}</td>
                                     <td>{{$aut->nacionalidade}}</td>
+                                    <td>
+                                        <a href="autors/{{$aut->id}}/edit" class="btn btn-info">Editar</a>
+                                    </td>
+                                    <td>
+                                        <form action="autors/delete/{{$aut->id}}" method="post">
+                                            @csrf
+                                            @method('delete')
+                                                <a class="btn btn-danger">Deletar</a>
+                                        </form>
+                                    </td>
                                 </tr>
                             @endforeach
                             </tbody>
