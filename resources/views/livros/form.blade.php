@@ -22,23 +22,28 @@
                                 <form action="{{url('livros/update')}}/{{ $livros->id }}" method="post">
                                     @csrf
                                     <div class="form-group">
-                                        <label for="nome">Nome:</label>
-                                        <input type="text" class="form-control" name="nome" value="{{ $livros->nome}}">
+                                        <label for="nome">Autor:</label>
+                                        <input type="text" class="form-control" name="autor" value="{{ $livros->autor}}">
                                     </div>
 
                                     <div class="form-group">
-                                        <label for="email">Sexo:</label>
-                                        <input type="text" class="form-control" name="sexo" value="{{ $livros->sexo }}">
+                                        <label for="email">Gênero Literário:</label>
+                                        <input type="text" class="form-control" name="genero_literario" value="{{ $livros->genero_literario }}">
                                     </div>
 
                                     <div class="form-group">
-                                        <label for="email">Nacionalidade:</label>
-                                        <input type="text" class="form-control" name="nacionalidade" value="{{ $livros->nacionalidade }}">
+                                        <label for="email">Editora:</label>
+                                        <input type="text" class="form-control" name="editora" value="{{ $livros->editora }}">
                                     </div>
 
                                     <div class="form-group">
-                                        <label for="email">Nascimento</label>
-                                        <input type="date" class="form-control" name="ano_nascimento" value="{{ $livros->ano_nascimento }}">
+                                        <label for="email">Titulo:</label>
+                                        <input type="text" class="form-control" name="titulo" value="{{ $livros->titulo }}">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="email">Ano do Lançamento:</label>
+                                        <input type="date" class="form-control" name="ano_lancamento" value="{{ $livros->ano_lancamento }}">
                                     </div>
 
                                     <div class="d-flex justify-content-end">
@@ -53,23 +58,33 @@
                                 <form action="{{url('livros/add')}}" method="post">
                                     @csrf
                                     <div class="form-group">
-                                        <label for="nome">Nome:</label>
-                                        <input type="text" class="form-control" name="nome">
+                                        <label for="autor">Autor:</label>
+                                        <input type="text" class="form-control" name="autor">
                                     </div>
 
                                     <div class="form-group">
-                                        <label for="email">Sexo:</label>
-                                        <input type="text" class="form-control" name="sexo">
+                                        <label for="autor">Id_Autor:</label>
+                                        <input type="text" class="form-control" name="id_autor">
                                     </div>
 
                                     <div class="form-group">
-                                        <label for="email">Nacionalidade:</label>
-                                        <input type="text" class="form-control" name="nacionalidade">
+                                        <label for="genero_literario">Gênero Literário:</label>
+                                        <input type="text" class="form-control" name="genero_literario">
                                     </div>
 
                                     <div class="form-group">
-                                        <label for="email">Nascimento</label>
-                                        <input type="date" class="form-control" name="ano_nascimento">
+                                        <label for="editora">Editora:</label>
+                                        <input type="text" class="form-control" name="editora">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="titulo">Titulo:</label>
+                                        <input type="text" class="form-control" name="titulo">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="ano_lancamento">Ano do Lançamento:</label>
+                                        <input type="date" class="form-control" name="ano_lancamento">
                                     </div>
                                     <div class="d-flex justify-content-end">
                                         <button type="submit" class="btn btn-success">Cadastrar</button>

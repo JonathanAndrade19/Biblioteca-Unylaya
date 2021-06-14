@@ -5,7 +5,7 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
-                    {{--<div class="card-header"><a href="{{url('autors/new')}}">Novo Autor</a></div>--}}
+                    <div class="card-header"><a href="{{url('livros/new')}}">Novo Livro</a></div>
 
                     <div class="card-body">
                         @if (session('status'))
@@ -37,7 +37,7 @@
                                     <td> {{ \Carbon\Carbon::parse($livro->ano_lancamento)->format('d/m/Y')}}</td>
 
                                     <td>
-                                        <a href="autors/{{$livro->id}}/edit" class="btn btn-info">Editar</a>
+                                        <a href="livros/{{$livro->id}}/edit" class="btn btn-info">Editar</a>
                                     </td>
                                     <td>
                                         <form method="post">
